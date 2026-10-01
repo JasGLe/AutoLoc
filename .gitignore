@@ -1,33 +1,114 @@
-HELP.md
-target/
-.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+# ==========================================
+# Spring Boot / Maven
+# ==========================================
 
-### STS ###
-.apt_generated
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+# Maven wrapper
+.mvn/wrapper/maven-wrapper.jar
+
+# Maven generated files
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+
+
+# ==========================================
+# Spring Boot
+# ==========================================
+
+# Spring Boot generated logs
+*.log
+logs/
+
+# Local Spring configuration
+application-local.properties
+application-local.yml
+application-local.yaml
+
+# Environment variables / secrets
+.env
+.env.*
+!.env.example
+
+
+# ==========================================
+# IntelliJ IDEA
+# ==========================================
+
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+
+# ==========================================
+# Eclipse / Spring Tool Suite
+# ==========================================
+
 .classpath
-.factorypath
 .project
-.settings
+.settings/
 .springBeans
 .sts4-cache
+.apt_generated
+.factorypath
 
-### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
 
-### NetBeans ###
+# ==========================================
+# VS Code
+# ==========================================
+
+.vscode/
+
+
+# ==========================================
+# NetBeans
+# ==========================================
+
 /nbproject/private/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
 
-### VS Code ###
-.vscode/
+
+# ==========================================
+# Gradle (if ever used)
+# ==========================================
+
+.gradle/
+build/
+
+
+# ==========================================
+# Java
+# ==========================================
+
+*.class
+hs_err_pid*
+replay_pid*
+
+
+# ==========================================
+# OS generated files
+# ==========================================
+
+.DS_Store
+Thumbs.db
+
+
+# ==========================================
+# Temporary files
+# ==========================================
+
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
