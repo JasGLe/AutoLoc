@@ -1,14 +1,12 @@
 package tn.esprit.autoloc.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import java.util.Date;
+import java.util.List;
 
 
 @Entity
@@ -24,4 +22,9 @@ public class Contrat {
     Date dateSignature;
     Long montantTotal;
     Boolean valide;
+
+    @OneToOne (mappedBy = "contrat")
+    Reservation reservation;
+    @OneToMany ( mappedBy = "contrat")
+    List<Paiement> paiements;
 }
