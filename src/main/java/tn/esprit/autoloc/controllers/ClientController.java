@@ -16,7 +16,7 @@ public class ClientController {
     public Client ajouterClient(@RequestBody Client client){
         return clientService.ajouterClient(client);
     }
-    @PutMapping
+    @PutMapping()
     public Client modifierClient(@RequestBody Client client){
         return clientService.modifierClient(client);
     }
