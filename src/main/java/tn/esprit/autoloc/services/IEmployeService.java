@@ -10,4 +10,6 @@ public interface IEmployeService {
     List<Employe> consulterEmployes();
     Employe consulterEmployeById(Long idEmploye);
     void supprimerEmploye(Long idEmploye);
+    Employe desaffecterEmploye(Long idEmploye);
+    Employe affecterEmploye(Long idEmploye, Long idAgence);
 }

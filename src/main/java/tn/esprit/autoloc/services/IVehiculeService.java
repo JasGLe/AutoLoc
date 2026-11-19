@@ -8,4 +8,6 @@ public interface IVehiculeService {
     void supprimerVehicule(Long idVehicule);
     List<Vehicule> consulterVehicules();
     Vehicule consulterVehiculeById(Long idVehicule);
+    Vehicule affecterEquipement(Long idVehicule, Long idEquipement);
+    Vehicule desaffecterEquipement(Long idVehicule, Long idEquipement);
 }

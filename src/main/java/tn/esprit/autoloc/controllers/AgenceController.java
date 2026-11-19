@@ -32,4 +32,10 @@ public class AgenceController {
     public List<Agence> consulterAgences(){
         return agenceService.consulterAgences();
     }
+    @PostMapping("/ajouterAgenceEtVehicules")
+    public Agence ajouterAgenceEtAffecterVehicules(
+            @RequestBody Agence agence) {
+
+        return agenceService.ajouterAgenceEtAffecterVehicules(agence);
+    }
 }

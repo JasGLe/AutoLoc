@@ -37,4 +37,19 @@ public class EmployeController {
     public List<Employe> consulterEmployes() {
         return employeService.consulterEmployes();
     }
+
+    @PutMapping("/desaffecter/{idEmploye}")
+    public Employe desaffecterEmploye(
+            @PathVariable Long idEmploye) {
+
+        return employeService.desaffecterEmploye(idEmploye);
+    }
+
+    @PutMapping("/affecter/{idEmploye}/{idAgence}")
+    public Employe affecterEmploye(
+            @PathVariable Long idEmploye,
+            @PathVariable Long idAgence) {
+
+        return employeService.affecterEmploye(idEmploye, idAgence);
+    }
 }
