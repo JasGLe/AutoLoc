@@ -87,8 +87,21 @@ public class IVehiculeServiceImp implements IVehiculeService {
         int nombreTotal = vehicules.size();
 
         System.out.println("===== RAPPORT DES VEHICULES =====");
+        System.out.println("Date et heure : " + LocalDateTime.now());
         System.out.println("Nombre total de véhicules : " + nombreTotal);
-        System.out.println("Date et heure de génération : " + LocalDateTime.now());
-        System.out.println("=================================");
+
+        System.out.println("Liste des véhicules :");
+
+        for (Vehicule v : vehicules) {
+            System.out.println(
+                    "ID : " + v.getIdVehicule()
+                            + " | Immatriculation : " + v.getImmatriculation()
+                            + " | Marque : " + v.getMarque()
+                            + " | Modèle : " + v.getModele()
+                            + " | Catégorie : " + v.getCategorie()
+                            + " | Tarif journalier : " + v.getTarifJournalier()
+                            + " | Statut : " + v.getStatut()
+            );
+        }
     }
 }
